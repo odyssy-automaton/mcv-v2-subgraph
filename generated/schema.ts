@@ -900,17 +900,8 @@ export class Proposal extends Entity {
     this.set("id", Value.fromString(value));
   }
 
-  get proposalIndex(): BigInt {
+  get proposalIndex(): BigInt | null {
     let value = this.get("proposalIndex");
-    return value.toBigInt();
-  }
-
-  set proposalIndex(value: BigInt) {
-    this.set("proposalIndex", Value.fromBigInt(value));
-  }
-
-  get proposalId(): BigInt | null {
-    let value = this.get("proposalId");
     if (value === null) {
       return null;
     } else {
@@ -918,12 +909,21 @@ export class Proposal extends Entity {
     }
   }
 
-  set proposalId(value: BigInt | null) {
+  set proposalIndex(value: BigInt | null) {
     if (value === null) {
-      this.unset("proposalId");
+      this.unset("proposalIndex");
     } else {
-      this.set("proposalId", Value.fromBigInt(value as BigInt));
+      this.set("proposalIndex", Value.fromBigInt(value as BigInt));
     }
+  }
+
+  get proposalId(): BigInt {
+    let value = this.get("proposalId");
+    return value.toBigInt();
+  }
+
+  set proposalId(value: BigInt) {
+    this.set("proposalId", Value.fromBigInt(value));
   }
 
   get moloch(): string {

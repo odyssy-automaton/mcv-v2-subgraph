@@ -6,11 +6,11 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: Moloch
-    network: kovan
+    network: mainnet
     source:
-      address: "0xc73bB4DdD7Ac90fD20dDd6F1817e97a0AB183D4a"
+      address: "0x4570b4faf71e23942b8b9f934b47ccedf7540162"
       abi: Moloch
-      startBlock: 16689700
+      startBlock: 9483190
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.3

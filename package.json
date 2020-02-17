@@ -4,12 +4,12 @@
   "scripts": {
     "test": "mocha --timeout 7000 test/subgraph.spec.js",
     "build-contract": "solc contracts/Moloch.sol --abi -o abis --overwrite && solc contracts/Moloch.sol --bin -o bin --overwrite",
-    "create": "graph create daodesigner/moloch-subgraph --node https://api.thegraph.com/deploy/",
-    "create-local": "graph create daodesigner/moloch-subgraph --node http://127.0.0.1:8020",
+    "create": "graph create odyssy-automaton/metacartel-ventures-moloch-v2 --node https://api.thegraph.com/deploy/",
+    "create-local": "graph create odyssy-automaton/metacartel-ventures-moloch-v2 --node http://127.0.0.1:8020",
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy daodesigner/kovanddq --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
-    "deploy-local": "graph deploy daodesigner/moloch-subgraph --ipfs http://localhost:5001 --node http://127.0.0.1:8020",
+    "deploy": "graph deploy odyssy-automaton/metacartel-ventures-moloch-v2 --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
+    "deploy-local": "graph deploy odyssy-automaton/metacartel-ventures-moloch-v2 --ipfs http://localhost:5001 --node http://127.0.0.1:8020",
     "ganache-cli": "ganache-cli -l 99900000  -m 'fetch local valve black attend double eye excite planet primary install allow'"
   },
   "devDependencies": {
